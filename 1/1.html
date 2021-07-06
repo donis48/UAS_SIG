@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="Start your development with a Design System for Bootstrap 4.">  
+  <meta name="author" content="Creative Tim">
+  <title>Peta Kecamatan di kabuaten Pati</title>
+  <link href="./assets/img/brand/favicon.jpg" rel="icon" type="image/jpg">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+  <link href="./assets/vendor/nucleo/css/nucleo.css" rel="stylesheet">
+  <link href="./assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link type="text/css" href="./assets/css/argon.css?v=1.0.1" rel="stylesheet">
+  <link type="text/css" href="./assets/css/docs.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="http://unpkg.com/leaflet@1.0.3/dist/leaflet.css">
+        <link rel="stylesheet" href="./css/qgis2web.css">
+        <style>
+            #map {
+                width: 867px;
+                height: 896px;
+            }
+            </style>
+            <title></title>
+
+</head>
+
+<body>
+  <header class="header-global">
+    <nav id="navbar-main" class="navbar navbar-main navbar-expand-lg navbar-transparent navbar-light headroom">
+      <div class="container">
+        <a class="navbar-brand mr-lg-5" href="../index.html">
+          <img src="./assets/img/brand/white.png">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse" id="navbar_global">
+          <div class="navbar-collapse-header">
+            <div class="row">
+              <div class="col-6 collapse-brand">
+                <a href="../index.html">
+                  <img src="./assets/img/brand/blue.png">
+                </a>
+              </div>
+              <div class="col-6 collapse-close">
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
+                  <span></span>
+                  <span></span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <ul class="navbar-nav navbar-nav-hover align-items-lg-center">
+            <li class="nav-item dropdown">
+              
+                  <li class="nav-item dropdown">
+                    <a href="#" class="nav-link" data-toggle="dropdown" href="#" role="button">
+                      <i class="ni ni-collection d-lg-none"></i>
+                      <span class="nav-link-inner--text">Peta Penelitian</span>
+                    </a>
+                    <div class="dropdown-menu">
+                      <a href="../1/1.html" class="dropdown-item">Peta Kecamatan di kabuaten Pati</a>
+                      
+                      <a href="../3/3.html" class="dropdown-item">Peta Kepadatan penduduk tahun 2014</a>
+                      <a href="../4/4.html" class="dropdown-item">Peta Kepadatan penduduk tahun 2015</a>
+                      <a href="../5/5.html" class="dropdown-item">Peta Kepadatan penduduk tahun 2016</a>
+                    </div>
+                  </li>
+                </div>
+              </div>
+            </li>
+          </ul>
+
+      
+
+
+<!-- Kontak -->
+
+          <ul class="navbar-nav align-items-lg-center ml-lg-auto">
+            <li class="nav-item">
+              <a class="nav-link nav-link-icon" href="https://web.facebook.com/donisetiawan48" target="_blank" data-toggle="tooltip" title="Ikuti Di Facebook">
+                <i class="fa fa-facebook-square"></i>
+                <span class="nav-link-inner--text d-lg-none">Facebook</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-icon" href="https://www.instagram.com/callme_doni/" target="_blank" data-toggle="tooltip" title="Follow Instagramku">
+                <i class="fa fa-instagram"></i>
+                <span class="nav-link-inner--text d-lg-none">Instagram</span>
+              </a>
+            </li>
+            <li class="nav-item d-none d-lg-block ml-lg-4">   
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+
+
+
+  <main>
+    <div class="position-relative">
+
+      <section class="section section-lg section-hero section-shaped">
+        <!-- Background circles -->
+        <div class="shape shape-style-1 shape-primary">
+          <span class="span-150"></span>
+          <span class="span-50"></span>
+          <span class="span-50"></span>
+          <span class="span-75"></span>
+          <span class="span-100"></span>
+          <span class="span-75"></span>
+          <span class="span-50"></span>
+          <span class="span-100"></span>
+          <span class="span-50"></span>
+          <span class="span-100"></span>
+        </div>
+        <div class="container shape-container d-flex align-items-center py-lg">
+          <div class="col px-0">
+            <div class="row align-items-center justify-content-center">
+              <div class="col-lg-6 text-center">
+                <img src="./assets/img/brand/white.png" style="width: 200px;" class="img-fluid">
+                
+                <h6 class="h5 text-success font-weight-bold mb-5">Peta Kecamatan di kabupaten Pati</h6>
+                <div class="btn-wrapper mt-5">
+                </div>
+                <div class="mt-5">
+                  <small class="text-white font-weight-bold mb-0 mr-2">KEPADATAN PENDUDUK</small>
+                </div>
+                  <small class="text-white font-weight-bold mb-0 mr-2">Pengertian kepadatan penduduk adalah perbandingan jumlah penduduk dengan luas wilayahnya. Kepadatan penduduk menunjukkan jumlah rata-rata penduduk pada setiap km2. Kepadatan penduduk dipengaruhi oleh fisiografis, keamanan, kebudayaan, biologis dan psikologis serta berkaitan erat dengan peningkatan jumlah penduduk yang disebut dengan pertumbuhan penduduk </small>
+                
+                 
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- SVG separator -->
+        <div class="separator separator-bottom separator-skew zindex-100">
+          <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
+            <polygon class="fill-white" points="2560 0 2560 100 0 100"></polygon>
+          </svg>
+        </div>
+      </section>
+    </div>
+    <section class="section section-components pb-0" id="section-components">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-12">
+
+
+          
+            <center><p>Peta dibawah Menunjukan ada 21 Kecamatan yang ada di kabupaten Pati yang dibedakan dengan berbagai warna.</p></center>
+            
+
+<!-- Pati -->
+    <center>         
+<div id="map">
+        </div>
+        <script src="js/qgis2web_expressions.js"></script>
+        <script src="js/leaflet.js"></script><script src="js/L.Control.Locate.min.js"></script>
+        <script src="js/leaflet.rotatedMarker.js"></script>
+        <script src="js/leaflet.pattern.js"></script>
+        <script src="js/leaflet-hash.js"></script>
+        <script src="js/Autolinker.min.js"></script>
+        <script src="js/rbush.min.js"></script>
+        <script src="js/labelgun.min.js"></script>
+        <script src="js/labels.js"></script>
+        <script src="js/Control.OSMGeocoder.js"></script>
+        <script src="js/leaflet-measure.js"></script>
+        <script src="data/PetaKecamatandiKabPATI_1.js"></script>
+        <script>
+        var highlightLayer;
+        function highlightFeature(e) {
+            highlightLayer = e.target;
+
+            if (e.target.feature.geometry.type === 'LineString') {
+              highlightLayer.setStyle({
+                color: '#ffff00',
+              });
+            } else {
+              highlightLayer.setStyle({
+                fillColor: '#ffff00',
+                fillOpacity: 1
+              });
+            }
+            highlightLayer.openPopup();
+        }
+        var map = L.map('map', {
+            zoomControl:true, maxZoom:28, minZoom:4
+        })
+        var hash = new L.Hash(map);
+        map.attributionControl.addAttribution('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a>');
+        L.control.locate().addTo(map);
+        var measureControl = new L.Control.Measure({
+            primaryLengthUnit: 'meters',
+            secondaryLengthUnit: 'kilometers',
+            primaryAreaUnit: 'sqmeters',
+            secondaryAreaUnit: 'hectares'
+        });
+        measureControl.addTo(map);
+        var bounds_group = new L.featureGroup([]);
+        var basemap0 = L.tileLayer('http://{s}.tile.thunderforest.com/transport/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="http://www.opencyclemap.org">OpenCycleMap</a>,&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors,<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
+            maxZoom: 28
+        });
+        basemap0.addTo(map);
+        function setBounds() {
+            if (bounds_group.getLayers().length) {
+                map.fitBounds(bounds_group.getBounds());
+            }
+        }
+        var overlay_GoogleRoad_0 = L.tileLayer('https://mt1.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
+            opacity: 1.0
+        });
+        overlay_GoogleRoad_0.addTo(map);
+        map.addLayer(overlay_GoogleRoad_0);
+        function pop_PetaKecamatandiKabPATI_1(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    for (i in e.target._eventParents) {
+                        e.target._eventParents[i].resetStyle(e.target);
+                    }
+                    if (typeof layer.closePopup == 'function') {
+                        layer.closePopup();
+                    } else {
+                        layer.eachLayer(function(feature){
+                            feature.closePopup()
+                        });
+                    }
+                },
+                mouseover: highlightFeature,
+            });
+            var popupContent = '<table>\
+                    <tr>\
+                        <th scope="row">id</th>\
+                        <td>' + (feature.properties['id'] !== null ? Autolinker.link(String(feature.properties['id'])) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Kecamatan</th>\
+                        <td>' + (feature.properties['Kecamatan'] !== null ? Autolinker.link(String(feature.properties['Kecamatan'])) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Penduduk</th>\
+                        <td>' + (feature.properties['Penduduk'] !== null ? Autolinker.link(String(feature.properties['Penduduk'])) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_PetaKecamatandiKabPATI_1_0(feature) {
+            switch(String(feature.properties['Kecamatan'])) {
+                case 'BATANGAN':
+                    return {
+                pane: 'pane_PetaKecamatandiKabPATI_1',
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(212,68,208,1.0)',
+            }
+                    break;
+                case 'CLUWAK':
+                    return {
+                pane: 'pane_PetaKecamatandiKabPATI_1',
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(214,96,147,1.0)',
+            }
+                    break;
+                case 'DUKUH SETI':
+                    return {
+                pane: 'pane_PetaKecamatandiKabPATI_1',
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(205,80,168,1.0)',
+            }
+                    break;
+                case 'GABUS':
+                    return {
+                pane: 'pane_PetaKecamatandiKabPATI_1',
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(112,142,201,1.0)',
+            }
+                    break;
+                case 'GEMBONG':
+                    return {
+                pane: 'pane_PetaKecamatandiKabPATI_1',
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(40,185,201,1.0)',
+            }
+                    break;
+                case 'GUNUNGWUNGKAL':
+                    return {
+                pane: 'pane_PetaKecamatandiKabPATI_1',
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(63,232,66,1.0)',
+            }
+                    break;
+                case 'JAKEN':
+                    return {
+                pane: 'pane_PetaKecamatandiKabPATI_1',
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(237,228,97,1.0)',
+            }
+                    break;
+                case 'JAKENAN':
+                    return {
+                pane: 'pane_PetaKecamatandiKabPATI_1',
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(101,74,201,1.0)',
+            }
+                    break;
+                case 'JUWANA':
+                    return {
+                pane: 'pane_PetaKecamatandiKabPATI_1',
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(86,220,41,1.0)',
+            }
+                    break;
+                case 'KAYEN':
+                    return {
+                pane: 'pane_PetaKecamatandiKabPATI_1',
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(184,203,107,1.0)',
+            }
+                    break;
+                case 'MARGOREJO':
+                    return {
+                pane: 'pane_PetaKecamatandiKabPATI_1',
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(210,125,72,1.0)',
+            }
+                    break;
+                case 'MARGOYOSO':
+                    return {
+                pane: 'pane_PetaKecamatandiKabPATI_1',
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(222,131,144,1.0)',
+            }
+                    break;
+                case 'PATI':
+                    return {
+                pane: 'pane_PetaKecamatandiKabPATI_1',
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(53,213,144,1.0)',
+            }
+                    break;
+                case 'PUNCAKWANGI':
+                    return {
+                pane: 'pane_PetaKecamatandiKabPATI_1',
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(188,29,240,1.0)',
+            }
+                    break;
+                case 'SUKOLILO':
+                    return {
+                pane: 'pane_PetaKecamatandiKabPATI_1',
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(210,89,73,1.0)',
+            }
+                    break;
+                case 'TAMBAKROMO':
+                    return {
+                pane: 'pane_PetaKecamatandiKabPATI_1',
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(73,152,205,1.0)',
+            }
+                    break;
+                case 'TAYU':
+                    return {
+                pane: 'pane_PetaKecamatandiKabPATI_1',
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(81,209,119,1.0)',
+            }
+                    break;
+                case 'TLOGOWUNGU':
+                    return {
+                pane: 'pane_PetaKecamatandiKabPATI_1',
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(54,65,208,1.0)',
+            }
+                    break;
+                case 'TRANGKIL':
+                    return {
+                pane: 'pane_PetaKecamatandiKabPATI_1',
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(55,214,188,1.0)',
+            }
+                    break;
+                case 'WEDARIJAKSA':
+                    return {
+                pane: 'pane_PetaKecamatandiKabPATI_1',
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(120,200,33,1.0)',
+            }
+                    break;
+                case 'WINONG':
+                    return {
+                pane: 'pane_PetaKecamatandiKabPATI_1',
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(204,149,37,1.0)',
+            }
+                    break;
+                default:
+                    return {
+                pane: 'pane_PetaKecamatandiKabPATI_1',
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(144,91,201,1.0)',
+            }
+                    break;
+            }
+        }
+        map.createPane('pane_PetaKecamatandiKabPATI_1');
+        map.getPane('pane_PetaKecamatandiKabPATI_1').style.zIndex = 401;
+        map.getPane('pane_PetaKecamatandiKabPATI_1').style['mix-blend-mode'] = 'normal';
+        var layer_PetaKecamatandiKabPATI_1 = new L.geoJson(json_PetaKecamatandiKabPATI_1, {
+            attribution: '<a href=""></a>',
+            pane: 'pane_PetaKecamatandiKabPATI_1',
+            onEachFeature: pop_PetaKecamatandiKabPATI_1,
+            style: style_PetaKecamatandiKabPATI_1_0,
+        });
+        bounds_group.addLayer(layer_PetaKecamatandiKabPATI_1);
+        map.addLayer(layer_PetaKecamatandiKabPATI_1);
+        var osmGeocoder = new L.Control.OSMGeocoder({
+            collapsed: false,
+            position: 'topright',
+            text: 'Search',
+        });
+        osmGeocoder.addTo(map);
+        var baseMaps = {};
+        L.control.layers(baseMaps,{'Peta Kecamatan di Kab PATI<br /><table><tr><td style="text-align: center;"><img src="legend/PetaKecamatandiKabPATI_1_BATANGAN0.png" /></td><td>BATANGAN</td></tr><tr><td style="text-align: center;"><img src="legend/PetaKecamatandiKabPATI_1_CLUWAK1.png" /></td><td>CLUWAK</td></tr><tr><td style="text-align: center;"><img src="legend/PetaKecamatandiKabPATI_1_DUKUHSETI2.png" /></td><td>DUKUH SETI</td></tr><tr><td style="text-align: center;"><img src="legend/PetaKecamatandiKabPATI_1_GABUS3.png" /></td><td>GABUS</td></tr><tr><td style="text-align: center;"><img src="legend/PetaKecamatandiKabPATI_1_GEMBONG4.png" /></td><td>GEMBONG</td></tr><tr><td style="text-align: center;"><img src="legend/PetaKecamatandiKabPATI_1_GUNUNGWUNGKAL5.png" /></td><td>GUNUNGWUNGKAL</td></tr><tr><td style="text-align: center;"><img src="legend/PetaKecamatandiKabPATI_1_JAKEN6.png" /></td><td>JAKEN</td></tr><tr><td style="text-align: center;"><img src="legend/PetaKecamatandiKabPATI_1_JAKENAN7.png" /></td><td>JAKENAN</td></tr><tr><td style="text-align: center;"><img src="legend/PetaKecamatandiKabPATI_1_JUWANA8.png" /></td><td>JUWANA</td></tr><tr><td style="text-align: center;"><img src="legend/PetaKecamatandiKabPATI_1_KAYEN9.png" /></td><td>KAYEN</td></tr><tr><td style="text-align: center;"><img src="legend/PetaKecamatandiKabPATI_1_MARGOREJO10.png" /></td><td>MARGOREJO</td></tr><tr><td style="text-align: center;"><img src="legend/PetaKecamatandiKabPATI_1_MARGOYOSO11.png" /></td><td>MARGOYOSO</td></tr><tr><td style="text-align: center;"><img src="legend/PetaKecamatandiKabPATI_1_PATI12.png" /></td><td>PATI</td></tr><tr><td style="text-align: center;"><img src="legend/PetaKecamatandiKabPATI_1_PUNCAKWANGI13.png" /></td><td>PUNCAKWANGI</td></tr><tr><td style="text-align: center;"><img src="legend/PetaKecamatandiKabPATI_1_SUKOLILO14.png" /></td><td>SUKOLILO</td></tr><tr><td style="text-align: center;"><img src="legend/PetaKecamatandiKabPATI_1_TAMBAKROMO15.png" /></td><td>TAMBAKROMO</td></tr><tr><td style="text-align: center;"><img src="legend/PetaKecamatandiKabPATI_1_TAYU16.png" /></td><td>TAYU</td></tr><tr><td style="text-align: center;"><img src="legend/PetaKecamatandiKabPATI_1_TLOGOWUNGU17.png" /></td><td>TLOGOWUNGU</td></tr><tr><td style="text-align: center;"><img src="legend/PetaKecamatandiKabPATI_1_TRANGKIL18.png" /></td><td>TRANGKIL</td></tr><tr><td style="text-align: center;"><img src="legend/PetaKecamatandiKabPATI_1_WEDARIJAKSA19.png" /></td><td>WEDARIJAKSA</td></tr><tr><td style="text-align: center;"><img src="legend/PetaKecamatandiKabPATI_1_WINONG20.png" /></td><td>WINONG</td></tr><tr><td style="text-align: center;"><img src="legend/PetaKecamatandiKabPATI_1_21.png" /></td><td></td></tr></table>': layer_PetaKecamatandiKabPATI_1,"Google Road": overlay_GoogleRoad_0,}).addTo(map);
+        setBounds();
+        var i = 0;
+        layer_PetaKecamatandiKabPATI_1.eachLayer(function(layer) {
+            var context = {
+                feature: layer.feature,
+                variables: {}
+            };
+            layer.bindTooltip((layer.feature.properties['Kecamatan'] !== null?String('<div style="color: #000000; font-size: 8pt; font-family: \'MS Shell Dlg 2\', sans-serif;">' + layer.feature.properties['Kecamatan']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_PetaKecamatandiKabPATI_1'});
+            labels.push(layer);
+            totalMarkers += 1;
+              layer.added = true;
+              addLabel(layer, i);
+              i++;
+        });
+        resetLabels([layer_PetaKecamatandiKabPATI_1]);
+        map.on("zoomend", function(){
+            resetLabels([layer_PetaKecamatandiKabPATI_1]);
+        });
+        map.on("layeradd", function(){
+            resetLabels([layer_PetaKecamatandiKabPATI_1]);
+        });
+        map.on("layerremove", function(){
+            resetLabels([layer_PetaKecamatandiKabPATI_1]);
+        });
+        </script>
+    </body>
+    </html>
+</center>
+
+
+
+
+<!-- Bawah -->
+<center>------------------------------------------------------------------------------------</center>
+    <div class="container">
+      <div class="row row-grid align-items-center my-md">
+        
+      <hr>
+      <div class="row align-items-center justify-content-md-between">
+        <div class="col-md-6">
+          <div class="copyright">
+            &copy; 2021
+            <a href="" target="_blank">Doni Setiawan</a>.
+          </div>
+        </div>
+
+        <div class="col-lg-6 text-lg-center btn-wrapper">
+            <a target="_blank" href="https://web.facebook.com/donisetiawan48" class="btn btn-neutral btn-icon-only btn-facebook btn-round btn-lg" data-toggle="tooltip" data-original-title="Ikuti Di Facebook">
+              <i class="fa fa-facebook-square"></i>
+            </a>
+            <a target="_blank" href="https://www.instagram.com/callme_doni/" class="btn btn-neutral btn-icon-only btn-instagram btn-lg btn-round" data-toggle="tooltip" data-original-title="Follow Instagramku">
+              <i class="fa fa-instagram"></i>
+            </a>
+      
+        <div class="col-md-6">
+          
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="./assets/vendor/jquery/jquery.min.js"></script>
+  <script src="./assets/vendor/popper/popper.min.js"></script>
+  <script src="./assets/vendor/bootstrap/bootstrap.min.js"></script>
+  <script src="./assets/vendor/headroom/headroom.min.js"></script>
+  <script src="./assets/vendor/onscreen/onscreen.min.js"></script>
+  <script src="./assets/vendor/nouislider/js/nouislider.min.js"></script>
+  <script src="./assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+  <script src="./assets/js/argon.js?v=1.0.1"></script>
+</body>
+
+</html>
